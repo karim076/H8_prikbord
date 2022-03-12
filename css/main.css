@@ -146,7 +146,21 @@ label{
     width: 600px;
 }
 
-
+table{
+  text-align: left;
+}
+tr:nth-child(odd)
+{
+  background-color:#ebebeb;
+}
+tr:first-child
+{
+  background-color:#d3d3d3;
+}
+tr:hover
+{
+  background-color:#d3d3d3;
+}
 
 
 /* ==========================================================================
