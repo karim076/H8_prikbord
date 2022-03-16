@@ -42,11 +42,11 @@
             <!-- Voeg hier de andere velden toe -->
                 
         </form>
-
         <!-- Formulier voor delete: -->
-        <form action="..." method="POST">
+        <form action="../backend/berichtenController.php" method="POST">
             <input type="hidden" name="action" value="delete">
             <!-- Voeg hier nog een veld toe -->
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="submit" value="Verwijder bericht">
         </form>
 

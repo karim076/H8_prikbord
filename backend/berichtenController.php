@@ -43,6 +43,28 @@ if($action == "edit")
     die();
 
 }
+if($action == "delete")
+{
+    $id = $_POST['id'];
+
+    //1. Haal de verbinding erbij
+    require_once 'conn.php';
+
+    //2. Schrijf query met placeholders
+    $query = "DELETE FROM berichten  
+              WHERE id = :id";
+
+    
+    //3. Zet query om naar statement
+    $statement = $conn->prepare($query);
+    //4. Voer statement uit, geef nu waarden mee voor de placeholders
+    $statement ->execute([
+        ":id" => $id
+    ]);
+
+    header("location: http://localhost/Tweede%20Periode/H8_prikbord");
+    die();
+}
 //.... hier komt de delete-code
 ?>
 
