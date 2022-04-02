@@ -23,7 +23,7 @@
         //(maak het 5-stappenplan nog af)
         $statement = $conn->prepare($query);
         $statement->execute([":id" => $id]);
-        $item = $statement->fetch(PDO::FETCH_ASSOC);
+        $berichten = $statement->fetch(PDO::FETCH_ASSOC);
         ?>
 
         <!-- Formulier voor edit: -->
@@ -32,10 +32,10 @@
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text"name="title"value="<?php echo$item['title'];?>">
+                <input type="text"name="title"value="<?php echo $berichten['title'];?>">
             <div class="form-group">
                 <label for="content">Berichten</label>
-                <textarea rows="4" cols="50" name="content"><?php echo$item['content'];?></textarea>
+                <textarea rows="4" cols="50" name="content"><?php echo $berichten['content'];?></textarea>
             <div class="form-group">
                 <input type="submit" value="Update">
             
