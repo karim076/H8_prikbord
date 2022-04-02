@@ -37,11 +37,11 @@
             <?php $number = 0; ?>
             <?php foreach($berichten as $melding): ?>
                 <tr>
-                    <?php $number += 1; ?>
+                    <?php $id = $melding['id'] ?>
                     <td><?php echo $melding['title']; ?></td>
                     <td><?php echo $melding['content']; ?></td>
                     <td><?php echo $melding['author']; ?></td>
-                    <td><a href="berichten/edit.php?id=<?php echo $number;?>">Aanpassen</a></td>
+                    <td><a href="berichten/edit.php?id=<?php echo $id;?>">Aanpassen</a></td>
                 </tr>
             <?php endforeach; ?>
         </table>
