@@ -31,7 +31,7 @@
             <tr>
                 <th>Titel</th>
                 <th>Bericht</th>
-                <th>Schrijver</th>
+                <th>Afdeling</th>
                 <th>Aanpassen</th>
             </tr>
             <?php $number = 0; ?>
